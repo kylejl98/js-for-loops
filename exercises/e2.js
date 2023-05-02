@@ -3,8 +3,15 @@
 // getNumbersWithSquareRoots(17) => [0, 1, 4, 9, 16]
 
 export function getNumbersWithSquareRoots(max) {
-  // Your code goes here...
+  var perfectSquares = []
 
+  for(let i = 0; i <= max; i++) {
+    let radicand = i * i
+    if (radicand <= max) {
+      perfectSquares.push(radicand)
+    } 
+  }
+  return perfectSquares;
 }
 
 // === TEST YOURSELF ===
