@@ -6,7 +6,27 @@
 // NOTE: You can NOT use the array.flat() method in your code
 
 export function flatArrays(array) {
-  // Your code goes here...
+
+  var flatArray = [];
+  
+  for(let i = 0; i < array.length; i++) {
+  
+    if(array[i].length == undefined) {
+    
+      flatArray.push(array[i]);
+    
+    } else {
+    
+      for (let j = 0; j < array[i].length; j++) {
+     
+        let innerArray = array[i];
+        flatArray.push(innerArray[j]);
+     
+      }
+    }
+  }
+  
+  return flatArray;
 
 }
 
